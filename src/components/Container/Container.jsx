@@ -15,8 +15,11 @@ const Container = ({
     <div
       className={`${extraClass} container ${!flex ? "fixedGrid" : "flexGrid"}`}
       style={{ background, margin, padding, height, ...style }}
-      {...restProps}>
-      <div className="gridChild">{children}</div>
+      {...restProps}
+    >
+      <div className="gridChild">
+        <>{children}</>
+      </div>
     </div>
   );
 };
